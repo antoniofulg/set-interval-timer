@@ -1,20 +1,13 @@
-import React from 'react';
-import { useAge } from './hooks';
+import React from "react";
+import { useAge } from "./hooks";
 
 function App() {
-  /* make whichever changes you deem necessary in this function */
-
-  // you will probably want to call the hook here: const ...  = useAge();
-
-  // you will want to replace the following line
-  const theTimeThatPassed = "???";
+  const { getAge, resetAge } = useAge();
 
   return (
     <div className="App">
-      <p>
-        Last Updated: {theTimeThatPassed}
-      </p>
-      {/* You will need to add a button here */}
+      <p>Last Updated: {getAge()}</p>
+      <button onClick={resetAge}>Reset Timer</button>
     </div>
   );
 }
